@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physical Activity Break</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0ea896;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .exercise {
+      margin-bottom: 20px;
+    }
+
+    .exercise h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .exercise p {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0ea896;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0ea896;
+    }
+
+    footer {
+      background-color: #0ea896;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Physical Activity Break</h1>
+  </header>
+  
+  <main>
+    <section class="exercise">
+      <h2>Exercise Break</h2>
+      <p>Take a short exercise break to experience the immediate benefits of physical activity on mood and energy levels.</p>
+      <button class="btn" onclick="startExercise()">Start Exercise</button>
+    </section>
+    <div id="exerciseInstructions" style="display: none;">
+      <h3>Instructions:</h3>
+      <p>Perform each exercise for 30 seconds:</p>
+      <br>
+      <p align="center">
+        Jumping Jacks<br>
+        Push-ups<br>
+        Squats<br>
+        Plank<br>
+        High Knees<br>
+    </p>
+    </div>
+  </main>
+
+  
+
+  <script>
+    function startExercise() {
+      document.getElementById('exerciseInstructions').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

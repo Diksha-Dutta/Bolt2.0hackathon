@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrition Activity</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0ea896;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .food-label {
+      margin-bottom: 20px;
+      
+    }
+
+    .food-label h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .food-label p {
+      margin-bottom: 20px;
+    }
+
+    .label img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .options label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .options select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      
+
+    }
+
+    .dropdown {
+       background-color:#0ea896;
+    }
+
+    footer {
+      background-color: #0ea896;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nutrition Activity: Analyzing Food Labels</h1>
+  </header>
+  
+  <main>
+    <section class="food-label">
+      <h2>Food Label Analysis</h2>
+      <p>Analyze the food label below and identify whether it's a nutritious option for building a balanced diet.</p>
+      <div class="label">
+        <img src="food-label.jpg" alt="Food Label">
+      </div>
+      <div class="options">
+        <label for="nutrition-rating">Nutrition Rating:</label>
+        <select id="nutrition-rating" name="nutrition-rating">
+          <option value="excellent">Excellent</option>
+          <option value="good">Good</option>
+          <option value="fair">Fair</option>
+          <option value="poor">Poor</option>
+        </select>
+      </div>
+    </section>
+  </main>
+
+ 
+</body>
+</html>

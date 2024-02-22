@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Medical Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #0ea896;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #0ea896;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0ea896;
+        }
+        .animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+    </style>
+</head>
+<body>
+    <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="container">
+        <h1>Student Medical Information Form</h1>
+        <form action="#" method="post">
+            <label for="studentName">Student's Full Name:</label>
+            <input type="text" id="studentName" name="studentName" required>
+
+            <label for="studentID">Student ID:</label>
+            <input type="text" id="studentID" name="studentID">
+
+            <label for="dateOfBirth">Date of Birth:</label>
+            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height">
+
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight">
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3"></textarea>
+
+            <label for="parentName">Parent/Guardian's Name:</label>
+            <input type="text" id="parentName" name="parentName" required>
+
+            <label for="parentEmail">Parent/Guardian's Email:</label>
+            <input type="email" id="parentEmail" name="parentEmail" required>
+
+            <label for="emergencyContact">Emergency Contact:</label>
+            <input type="text" id="emergencyContact" name="emergencyContact" required>
+
+            <label for="medicalHistory">Medical History:</label>
+            <textarea id="medicalHistory" name="medicalHistory" rows="4"></textarea>
+
+            <label for="allergies">Allergies (if any):</label>
+            <input type="text" id="allergies" name="allergies">
+
+            <label for="medications">Current Medications (if any):</label>
+            <input type="text" id="medications" name="medications">
+
+            <label for="vaccination">Vaccination Status:</label>
+            <select id="vaccination" name="vaccination">
+                <option value="fully_vaccinated">Fully Vaccinated</option>
+                <option value="partially_vaccinated">Partially Vaccinated</option>
+                <option value="not_vaccinated">Not Vaccinated</option>
+                <option value="unknown">Unknown</option>
+            </select>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

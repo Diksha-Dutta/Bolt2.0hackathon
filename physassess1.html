@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physical Health Assessment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #result {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Physical Health Assessment</h1>
+    <form id="physicalHealthForm">
+      <div class="question">
+        <p>1. How many hours of physical activity should adults aim for each week?</p>
+        <input type="radio" id="option1" name="question1" value="a">
+        <label for="option1"> 1-2 hours</label><br>
+        <input type="radio" id="option2" name="question1" value="b">
+        <label for="option2"> 2-3 hours</label><br>
+        <input type="radio" id="option3" name="question1" value="c">
+        <label for="option3"> 3-5 hours</label><br>
+      </div>
+      <div class="question">
+        <p>2. Which of the following is not a component of physical fitness?</p>
+        <input type="radio" id="option4" name="question2" value="a">
+        <label for="option4"> Cardiovascular endurance</label><br>
+        <input type="radio" id="option5" name="question2" value="b">
+        <label for="option5"> Flexibility</label><br>
+        <input type="radio" id="option6" name="question2" value="c">
+        <label for="option6"> Body weight</label><br>
+      </div>
+      <div class="question">
+        <p>3. Which exercise is best for improving cardiovascular health?</p>
+        <input type="radio" id="option7" name="question3" value="a">
+        <label for="option7"> Running</label><br>
+        <input type="radio" id="option8" name="question3" value="b">
+        <label for="option8"> Weightlifting</label><br>
+        <input type="radio" id="option9" name="question3" value="c">
+        <label for="option9"> Yoga</label><br>
+      </div>
+      <div class="question">
+        <p>4. What is the recommended daily water intake for adults?</p>
+        <input type="radio" id="option10" name="question4" value="a">
+        <label for="option10"> 1 liter</label><br>
+        <input type="radio" id="option11" name="question4" value="b">
+        <label for="option11"> 2 liters</label><br>
+        <input type="radio" id="option12" name="question4" value="c">
+        <label for="option12"> 3 liters</label><br>
+      </div>
+      <div class="question">
+        <p>5. What is the recommended amount of sleep for adults?</p>
+        <input type="radio" id="option13" name="question5" value="a">
+        <label for="option13"> 6-7 hours</label><br>
+        <input type="radio" id="option14" name="question5" value="b">
+        <label for="option14"> 7-9 hours</label><br>
+        <input type="radio" id="option15" name="question5" value="c">
+        <label for="option15"> 9-10 hours</label><br>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    document.getElementById('physicalHealthForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      var score = 0;
+
+      // Check answers for question 1
+      var answer1 = document.querySelector('input[name="question1"]:checked');
+      if (answer1) {
+        if (answer1.value === 'c') {
+          score++;
+        }
+      }
+
+      // Check answers for question 2
+      var answer2 = document.querySelector('input[name="question2"]:checked');
+      if (answer2) {
+        if (answer2.value === 'c') {
+          score++;
+        }
+      }
+
+      // Check answers for question 3
+      var answer3 = document.querySelector('input[name="question3"]:checked');
+      if (answer3) {
+        if (answer3.value === 'a') {
+          score++;
+        }
+      }
+
+      // Check answers for question 4
+      var answer4 = document.querySelector('input[name="question4"]:checked');
+      if (answer4) {
+        if (answer4.value === 'b') {
+          score++;
+        }
+      }
+
+      // Check answers for question 5
+      var answer5 = document.querySelector('input[name="question5"]:checked');
+      if (answer5) {
+        if (answer5.value === 'b') {
+          score++;
+        }
+      }
+
+      // Display result
+      var resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = Your score: ${score} out of 5;
+    });
+  </script>
+</body>
+</html>
